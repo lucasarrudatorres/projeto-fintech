@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas financeiras</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    
+    <link rel="stylesheet" href="../css/metas.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/pagesStyle.css">
+</head>
+<body>
+    
+    <div class="container" id="gastos-container">
+        
+        <!-- ÍNICIO Sidebar -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="../imagens/LOGO.png">
+                    <h2>FE<span class="danger">LT</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="./dashboard.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="./gastos.html">
+                    <span class="material-icons-sharp">account_balance</span>
+                    <h3>Gastos Mensais</h3>
+                </a>
+                <a href="./recebimentos.html">
+                    <span class="material-icons-sharp">currency_exchange</span>
+                    <h3>Recebimentos</h3>
+                    <!-- <span class="control-count">26</span> -->
+                </a>
+                <a href="./investimentos.html">
+                    <span class="material-icons-sharp">local_atm</span>
+                    <h3>Investimentos</h3>
+                </a>
+                <a href="./metas.html" class="active">
+                    <span class="material-icons-sharp">trending_up</span>
+                    <h3>Metas a Cumprir</h3>
+                </a>
+                <a href="./configuracoesPerfil.html">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Configurações</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Sair</h3>
+                </a>
+  
+            </div>
+        </aside>
+        <!-- FIM Sidebar -->
+
+        <main>
+            <div class="gastos-container">
+                <form class="add-gasto-form">
+                    <h2>Adicionar Metas financeiras</h2>
+
+                    <label for="Nome">Nome</label>
+                    <input type="text" id="nome" name="descricao" placeholder="Ex.: Viagem, casa própria..." required>
+                   
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Ex.: Maldivas, Casa beira mar..." required>
+                
+                    <label for="valor">Valor (R$)</label>
+                    <input type="number" id="valor" name="valor" placeholder="0.00" step="0.01" required>
+                
+                    <label for="data">Data</label>
+                    <input type="date" id="data" name="data" required>
+                    
+                    <button type="submit" class="add-gasto-button">Adicionar </button>
+                </form>
+                <div class="gastos-lista">
+                    <table id="gastos-tabela">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Descrição</th>
+                                <th>Valor (R$)</th>
+                                <th>Data</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="gastosTabelaCorpo">
+                            <!-- Linhas de gastos serão inseridas aqui -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Olá, <b>Lucas</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="../imagens/fotinha.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- FINAL DO TOP -->
+            <div class="recent-updates">
+                <h2>Atualizações Recentes</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="../imagens/patrick_juju1.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Xandinho Europeu</b> Adicionou o molho nas configurações</p>
+                            <small class="text-muted">2 Minutos atrás</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="../imagens/gabriel.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Manual Bre</b> Adicionou as imagens ao perfil</p>
+                            <small class="text-muted">1 hora atrás</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="../imagens/ingor.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>Grande Negócio</b> Esta consertando o problema eminente</p>
+                            <small class="text-muted">4 horas atrás</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resumo-mensal">
+                <h3>Resumo Mensal</h3>
+                <p>Alimentação: <span id="alimentacao">R$ 0.00</span></p>
+                <p>Transporte: <span id="transporte">R$ 0.00</span></p>
+                <p>Lazer: <span id="lazer">R$ 0.00</span></p>
+                <p>Saúde: <span id="saude">R$ 0.00</span></p>
+                <p>Contas a Pagar: <span id="contas-a-pagar">R$ 0.00</span></p>
+
+                <p>Total Gasto: <span id="totalGasto">R$ 0.00</span></p>
+            </div>            
+        <script src="../javascript/metas.js"></script>
+</body>
+</html>

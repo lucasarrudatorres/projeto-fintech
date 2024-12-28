@@ -1,0 +1,81 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background-color: rgba(224, 224, 224, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+.sidebar img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.sidebar h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+.sidebar p {
+    font-size: 0.7rem;
+    color: #666;
+    margin: 0 0 20px;
+}
+.sidebar .menu-item {
+    font-size:14px;
+    margin: 10px 0;
+    color: #888;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+.sidebar .menu-item:hover {
+    color: #7380ec;
+}
+.sidebar .menu-item.active {
+    font-weight: bold;
+    background-color: #7380ec;
+    color: #fff;
+}
+.sidebar .menu-item.active:hover {
+    background-color: #6974d6;
+}
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.content h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.content p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+.content p strong {
+    font-weight: bold;
+}
+.content a {
+    display: inline;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+}
+.content a:hover {
+    text-decoration: underline;
+}
