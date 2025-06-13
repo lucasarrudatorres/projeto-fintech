@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="../css/configuracoesPrivacidadeESeguranca.css" rel="stylesheet">
+    <title>Privacidade e Segurança</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <img alt="User profile picture" height="50" src="../imagens/fotinha.jpg" width="50" />
+        <h2>
+            Guilherme Alexandre
+        </h2>
+        <p>
+            guilhermealexandre817@gmail.com
+        </p>
+        <a class="menu-item" href="configuracoesPerfil.html">
+            Perfil
+        </a>
+        <a class="menu-item" href="./configuracoesNotificacoes.html">
+            Notificações e Alertas
+        </a>
+        <a class="menu-item" href="../pages/configuracoesIdiomaERegiao.html">
+            Idioma e região
+        </a>
+        <a class="menu-item" href="../pages/configuracoesPersonalizacoesEPreferencias.html">
+            Personalização e Preferências
+        </a>
+        <a class="menu-item active" href="../pages/configuracoesPrivacidadeESeguranca.html">
+            Privacidade e Segurança
+        </a>
+        <a class="menu-item" href="../pages/configuracoesSuporteEFeedback.html">
+            Feedback e Suporte
+        </a>
+        <a class="menu-item" href="../pages/configuracoesExclusaoConta.html">
+            Exclusão e Desativação da Conta
+        </a>
+        <a class="menu-item" href="./dashboard.html">
+            Voltar 
+        </a>
+        </a>
+    </div>
+    <div class="content">
+        <div class="topic">
+            <h1>
+                Alteração de Senha
+            </h1>
+            <input id="password" placeholder="Digite a nova senha" type="password" />
+            <i class="fa fa-eye toggle-password" id="togglePassword" onclick="togglePasswordVisibility()"></i>
+            <div class="button-group">
+                <button>
+                    Alterar
+                </button>
+            </div>
+        </div>
+        <div class="topic">
+            <h1>
+                Autenticação de Dois Fatores (2FA)
+            </h1>
+            <p class="description">
+                Ativar 2FA para adicionar uma camada extra de segurança, exigindo um código extra enviado por SMS,
+                e-mail ou um app autenticador.
+            </p>
+            <div class="checkbox-group">
+                <label>
+                    Ativar 2FA
+                    <input type="checkbox" name="2fa" value="enable-2fa">
+                </label>
+            </div>
+        </div>
+        <div class="topic">
+            <h1>
+                Recuperação de Conta
+            </h1>
+            <div class="button-group">
+                <button>
+                    Adicionar E-mail de Recuperação
+                </button>
+                <button>
+                    Adicionar Pergunta de Segurança
+                </button>
+            </div>
+        </div>
+        <div class="topic">
+            <h1>
+                Permissões de Acesso
+            </h1>
+            <h2>
+                Gerenciamento de Permissões
+            </h2>
+            <div class="checkbox-group">
+                <label>
+                    Localização
+                    <input type="checkbox" name="permissions" value="location">
+                </label>
+                <label>
+                    Câmera
+                    <input type="checkbox" name="permissions" value="camera">
+                </label>
+                <label>
+                    Microfone
+                    <input type="checkbox" name="permissions" value="microphone">
+                </label>
+                <label>
+                    Contatos
+                    <input type="checkbox" name="permissions" value="contacts">
+                </label>
+            </div>
+        </div>
+        <div class="topic">
+            <h1>
+                Configurações de Notificações de Segurança
+            </h1>
+            <div class="checkbox-group">
+                <label>
+                    Alertas de Atividade Incomum
+                    <input type="checkbox" name="security-notifications" value="unusual-activity">
+                </label>
+                <p class="description">
+                    Habilitar alertas para logins de novos dispositivos ou localização incomum.
+                </p>
+                <label>
+                    Notificações de Alteração de Configuração
+                    <input type="checkbox" name="security-notifications" value="config-change">
+                </label>
+                <p class="description">
+                    Receber notificações quando configurações de segurança, como senha ou 2FA, forem alteradas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../javascript/configPrivacidade.js"></script>
+</body>
+
+</html>
